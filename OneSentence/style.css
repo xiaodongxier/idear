@@ -1,3 +1,10 @@
+video {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
 @keyframes fadeInLeftBig {
   0% {
     opacity: 0;

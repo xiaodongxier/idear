@@ -31,4 +31,8 @@ $(function () {
   // $(".parePage").click(function () {
   //   updata(starNumber -= 5, endNumber -= 5)
   // })
+  // $("#video_player").click(function(){
+  //   // $("#video_player")[0].play(); 
+  //   $("*")[0].play(); 
+  // })
 })
