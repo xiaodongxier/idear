@@ -1,0 +1,106 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+  /* font-family: cursive; */
+}
+
+body {
+  max-width: 990px;
+  margin: 0 auto;
+  background: #323232;
+  padding: 0 5%;
+}
+
+strong {
+  font-weight: 900;
+  font-size: 12px;
+  color: #323232;
+}
+
+#app {
+  background: #fff;
+}
+
+ol li {
+  list-style: none;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+}
+
+ol li:nth-child(odd) {
+  background: #fff;
+}
+
+ol li:nth-child(even) {
+  background: #eee;
+}
+
+video {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+@keyframes fadeInLeftBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100px, 0, 0);
+    transform: translate3d(-100px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+
+/* 列表对齐问题 */
+
+ol {
+  counter-reset: foo;
+  display: table;
+}
+
+ol > li {
+  counter-increment: foo;
+  display: table-row;
+}
+
+ol > li::before {
+  content: counter(foo)".";
+  display: table-cell; /* aha! */
+  text-align: right;
+}
+
+/*  */
+
+/* <768px */
+@media screen and (max-width:768px) { 
+  ol li {
+    height: 25px;
+    line-height: 25px;
+    font-size: 15px;
+  }
+  strong {
+    font-size: 10px;
+  }
+  body {
+    padding: 0 2%;
+  }
+}
+/* >=992 and  */
+@media screen and (min-width:992px){
+
+}
+/* >=768px and <1200px */
+@media screen and (min-width:768px) and (max-width:1200px){
+
+}
+/* >=1200px */
+@media screen and (min-width: 1200px) {
+  
+}
