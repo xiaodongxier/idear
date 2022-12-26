@@ -1,7 +1,7 @@
 $(function () {
   var time = .02;
   var starNumber = 0;
-  var endNumber = 60;
+  var endNumber = 25;
   function updata(starItem, endItem) {
     for (var i = starItem; i < endItem; i++) {
       if (myword[i] !== undefined) {
