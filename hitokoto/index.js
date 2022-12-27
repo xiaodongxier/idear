@@ -1,13 +1,15 @@
 $(function () {
-  var time = .02;
+  var time = .07;
   var starNumber = 0;
   var endNumber = 25;
   function updata(starItem, endItem) {
     for (var i = starItem; i < endItem; i++) {
       if (myword[i] !== undefined) {
-        // $("#app ol").append(`<li class="animated fadeInLeft" style="animation-duration:${time += .02}s">${myword[i].id}.${myword[i].hitokoto} - <strong>${myword[i].from}</strong></li>`)
-        // $("#app .list").append(`<li class="animated fadeInLeft" style="animation-duration:${time += .02}s">${myword[i].id}. ${myword[i].hitokoto} - <strong>${myword[i].from}</strong></li>`)
-        $("#app .list").append(`<li class="animated fadeInLeft" style="animation-duration:${time += .02}s">${myword[i].hitokoto} - <strong>${myword[i].from}(${myword[i].creator})</strong></li>`)
+        if(i%2==0) {
+          $("#app .list").append(`<li class="animated fadeInLeft" style="animation-duration:${time += .07}s">${myword[i].hitokoto} - <strong>${myword[i].from}(${myword[i].creator})</strong></li>`)
+        }else {
+          $("#app .list").append(`<li class="animated fadeInRight" style="animation-duration:${time += .07}s">${myword[i].hitokoto} - <strong>${myword[i].from}(${myword[i].creator})</strong></li>`)
+        }
       } else {
         $("#app .list").append(`<li class="animated fadeInLeft" style="display:none">无数据</li>`)
       }
